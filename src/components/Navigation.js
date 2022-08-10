@@ -1,4 +1,5 @@
 import React from 'react'
+import { Outlet, Link } from "react-router-dom";
 
 export default function Navigation() {
   return (
@@ -26,11 +27,7 @@ export default function Navigation() {
             </div>
             <div className="navigation-middle">
               <nav role="navigation" className="nav-menu w-nav-menu">
-                <a
-                  href="index.html"
-                  aria-current="page"
-                  className="navigation-link w-nav-link w--current"
-                  >Home</a>
+                <Link className="navigation-link w-nav-link w--current" to='/About'>Home</Link>
                 <div
                   data-hover="true"
                   data-delay="100"
@@ -41,8 +38,10 @@ export default function Navigation() {
                       className="nav-dropdown-icon w-icon-dropdown-toggle"
                     ></div>
                     <div>About</div>
+                    {/* <Link className="navigation-link w-nav-link w--current" to='/About'>Home</Link> */}
+
                   </div>
-                  <nav
+                  {/* <nav
                     className="dropdown-list-template big-list w-dropdown-list"
                   >
                     <div className="dropdown-corner"></div>
@@ -56,7 +55,7 @@ export default function Navigation() {
                           <a
                             href="projects.html"
                             className="nav-dropdown-link dropdown-grid-link w-dropdown-link"
-                            >My Projects</a>
+                            >MyProjects</a>
                           <a
                             href="https://www.joewebbdesigns.com/post/how-i-built-my-portfolio-website"
                             className="nav-dropdown-link dropdown-grid-link w-dropdown-link"
@@ -68,7 +67,7 @@ export default function Navigation() {
                       </div>
                     </div>
                     <div className="dropdown-bridge"></div>
-                  </nav>
+                  </nav> */}
                 </div>
                 <a href="projects.html" className="navigation-link w-nav-link"
                   >Projects</a
