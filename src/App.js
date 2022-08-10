@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './webflowFiles/css/normalize.css';
+// import './App.css';
+import './webflowFiles/css/components.css';
+import './webflowFiles/css/joe-webb.css';
+import {projects} from './wf-data/projects'
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
 
 function App() {
+  console.log(projects)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App body">
+      {/* <Projects projects={projects} /> */}
+      {/* <About /> */}
+      <Home />
     </div>
   );
 }
