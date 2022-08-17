@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.7625a910.css",
+    "main.js": "/react-gh-pages/static/js/main.9931ebcf.js",
+    "static/js/787.3bb5ed86.chunk.js": "/react-gh-pages/static/js/787.3bb5ed86.chunk.js",
+    "static/media/Untitled-design-3.png": "/react-gh-pages/static/media/Untitled-design-3.7eef9c2bd1142a54d5fb.png",
+    "static/media/Profile-Photo-1.png": "/react-gh-pages/static/media/Profile-Photo-1.7e2ee1fb41ccc37940f8.png",
+    "static/media/about-me.png": "/react-gh-pages/static/media/about-me.c3a3bc06c152cac8c30e.png",
+    "static/media/joe-webb-logo-grey.png": "/react-gh-pages/static/media/joe-webb-logo-grey.f3d400db9a4fbaa418f7.png",
+    "static/media/joe-webb-logo-white.png": "/react-gh-pages/static/media/joe-webb-logo-white.50fae0a795f1dc689bff.png",
+    "static/media/joe-webb-logo-white-p-500.png": "/react-gh-pages/static/media/joe-webb-logo-white-p-500.4b0cd59a9f8d9084e614.png",
+    "index.html": "/react-gh-pages/index.html",
+    "static/media/right-long-arrow-red.svg": "/react-gh-pages/static/media/right-long-arrow-red.d85d7b85105e7e16a5d4902b487a87e2.svg",
+    "static/media/down-arrow.svg": "/react-gh-pages/static/media/down-arrow.dacd2ac1397f4bb812ad8e92760fa466.svg",
+    "main.7625a910.css.map": "/react-gh-pages/static/css/main.7625a910.css.map",
+    "main.9931ebcf.js.map": "/react-gh-pages/static/js/main.9931ebcf.js.map",
+    "787.3bb5ed86.chunk.js.map": "/react-gh-pages/static/js/787.3bb5ed86.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7625a910.css",
+    "static/js/main.9931ebcf.js"
+  ]
+}
