@@ -11,7 +11,6 @@ export default function ProjectListItem(props) {
 
         {/* <Project {...props}/> */}
         <div className="w-dyn-list">
-        <h2>ItemId is 👉️ {props.ItemID}</h2>
         <div role="list" className="w-dyn-items">
             <div role="listitem" className="w-dyn-item">
                 <Link to={`/project/${props.ItemID}`} className="project w-inline-block">
