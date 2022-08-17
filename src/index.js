@@ -10,17 +10,14 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
+import Home from "./pages/Home";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <Routes>
-      <React.StrictMode>
-        <Route path='/' element={<App />} />
-        <Route path='About' element={<About/>} />
-        <Route path='About' element={<Projects/>} />
-      </React.StrictMode>
-    </Routes>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
   </BrowserRouter>
 );
 

@@ -2,7 +2,7 @@ import React from 'react'
 import downArrow from "../webflowFiles/images/down-arrow.svg"
 
 export default function ProjectListItem(props) {
-    console.log(props)
+    // console.log(props)
     return (
         <div className="w-dyn-list">
             <div role="list" className="w-dyn-items">

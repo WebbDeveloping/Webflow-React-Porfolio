@@ -6,10 +6,11 @@ import ServiceSection from '../components/ServiceSection'
 import SideCaptions from '../components/SideCaptions'
 import myPhoto from '../webflowFiles/images/about-me.png'
 import myLogo from '../webflowFiles/images/joe-webb-logo-white.png'
+import { Link } from "react-router-dom";
 
 export default function About() {
     return (
-        <div className="bg-jet">
+        <div className="body bg-jet">
             <Navigation />
             <SideCaptions />
             <div className="section top-section">

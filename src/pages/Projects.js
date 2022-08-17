@@ -3,15 +3,19 @@ import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 import ProjectListItem from "../components/ProjectListItem";
 import ProjectSection from "../components/ProjectSection";
+import { Link } from "react-router-dom";
 // import ProjectListItem from '../ProjectListItem'
 
 export default function Projects(props) {
+    // const [data, setData] = React.useState(props.projects);
+
     const projectList = props.projects.map(pro => {
+        console.log('pro', pro)
         return <ProjectListItem {...pro} />
     })
-
+console.log(props.projects)
     return (
-        <section>
+        <section className='body'>
             <Navigation />
             <div className="section top-section">
                 <div className="main-container">
@@ -45,10 +49,8 @@ export default function Projects(props) {
             <div className="section project-section">
                 <div className="main-container">
                     <div className="feature-colection-grid w-dyb-items">
-
-                    {projectList}
+                        {projectList}
                     </div>
-
                 </div>
             </div>
             <Footer />
