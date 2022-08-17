@@ -1,6 +1,6 @@
 # My Portfolio Rebuild in React
 
-<!-- ![login-page-form](https://github.com/WebbDeveloping/login-app-react-sass/blob/main/src/styles/images/screenshots/login-screen-screnshot.png?raw=true) -->
+![home-screenshot](https://github.com/WebbDeveloping/webflow-portfolio/blob/main/src/styles/images/hero-screenshot.png?raw=true)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
