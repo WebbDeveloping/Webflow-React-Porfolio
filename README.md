@@ -27,6 +27,10 @@ Projects
 
 ![projects-page](https://github.com/WebbDeveloping/Webflow-React-Porfolio/blob/main/src/styles/images/project-page.png)
 
+Contact
+
+![contact-page](https://github.com/WebbDeveloping/Webflow-React-Porfolio/blob/main/src/styles/images/contact-page.png)
+
 <!-- ![contact-paget](https://github.com/WebbDeveloping/Webflow-React-Porfolio/blob/main/src/styles/images/contact-page.png) -->
 
 
