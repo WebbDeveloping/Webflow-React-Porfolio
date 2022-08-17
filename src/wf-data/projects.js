@@ -10,7 +10,7 @@ export const projects = [
       "MainProjectImage": "https://uploads-ssl.webflow.com/6104d73a27db50b91d2b6c77/6244cbb55a2bfc0ca9f77d0e_Website%20Image%20Display%20(1).png",
       "Client": "AA Finish Concrete",
       "ClientLogo": "",
-      "ServicesRendered": "<p><strong>WEB DESIGN • GOHIGHLEVEL • FUNNELS</strong></p><p>‍</p>",
+      "ServicesRendered": "WEB DESIGN • GOHIGHLEVEL • FUNNELS",
       "FeaturedProject?": true,
       "LargeDesktopImg": "https://uploads-ssl.webflow.com/6104d73a27db50b91d2b6c77/6244cfcd67c43122bd753e0b_aa%20concrete%20desktop.png",
       "StandardDesktopImg": "https://uploads-ssl.webflow.com/6104d73a27db50b91d2b6c77/6244cfcd67c43122bd753e0b_aa%20concrete%20desktop.png",
@@ -145,7 +145,7 @@ export const projects = [
       "MainProjectImage": "https://uploads-ssl.webflow.com/6104d73a27db50b91d2b6c77/61255b1ff4389a36123c4e66_Website%20Image%20Display.png",
       "Client": "Solar Initiative",
       "ClientLogo": "https://uploads-ssl.webflow.com/6104d73a27db50b91d2b6c77/6125556da77889fe7bb7801b_1629836652937-image12.jpg",
-      "ServicesRendered": "<p><strong>LOGO DESIGN • WEB DESIGN • MOBILE OPTIMIZED • LEAD TRACKING</strong></p><p>‍</p>",
+      "ServicesRendered": "LOGO DESIGN • WEB DESIGN • MOBILE OPTIMIZED • LEAD TRACKING",
       "FeaturedProject?": true,
       "LargeDesktopImg": "https://uploads-ssl.webflow.com/6104d73a27db50b91d2b6c77/616db6eb42a2ff283ca86e8b_1.png",
       "StandardDesktopImg": "https://uploads-ssl.webflow.com/6104d73a27db50b91d2b6c77/616db6f4f398632fec95285f_2.png",
@@ -249,7 +249,6 @@ export const projects = [
   }
 
   export function getProject(number) {
-    console.log('number', number)
     return projects.find(
       (project) => project.ItemID == number
     );

@@ -2,6 +2,13 @@ import React from 'react'
 import greylogo from '../webflowFiles/images/joe-webb-logo-grey.png'
 
 export default function HomeHero() {
+  const inEffect = `
+  @keyframes scroll-into-view-04 {
+    0%   { opacity: 0; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
+  }
+`;
   return (
     <div className="section hero">
     <div className="main-container">
@@ -11,19 +18,8 @@ export default function HomeHero() {
             <div className="hero-section-heading half-width-hero">
               <h1
                 // data-w-id="99a19604-06dc-2ac4-9759-f1406c7ee8fb"
-                // style="
-                //   -webkit-transform: translate3d(0, 0, 0)
-                //     scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0)
-                //     skew(0, 0);
-                //   -moz-transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1)
-                //     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                //   -ms-transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1)
-                //     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                //   transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1)
-                //     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                //   opacity: 0;
-                // "
-                className="large-titlee"
+  // style={{ transform: "translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)", opacity: "1"}}
+                className="large-titlee slidein-04s"
               >
                 I’m <span className="primary">Joe Webb</span>, a Web Designer
                 &amp;<span className="primary"> Developer</span
@@ -45,7 +41,7 @@ export default function HomeHero() {
                 //     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
                 //   opacity: 0;
                 // "
-                className="regular"
+                className="regular slidein-07s"
               >
                 Hi, my name is Joe Webb and I&#x27;m a custom website
                 developer.
@@ -118,7 +114,7 @@ export default function HomeHero() {
             src={greylogo}
             loading="lazy"
             alt=""
-            className="slash-svg"
+            className="slash-svg slidein-02s"
           />
         </div>
       </div>

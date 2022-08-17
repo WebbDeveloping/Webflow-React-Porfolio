@@ -1,10 +1,7 @@
 import React from 'react'
 import downArrow from "../webflowFiles/images/down-arrow.svg";
 import {
-    Link,
-    useParams,
-    useNavigate,
-    useLocation,
+    useParams
 } from "react-router-dom";
 import { getProject, projects } from "../wf-data/projects";
 import Navigation from '../components/Navigation';
@@ -13,11 +10,14 @@ import Footer from '../components/Footer';
 
 export default function Project() {
 
-    let navigate = useNavigate();
-    let location = useLocation();
+
     let params = useParams();
     let project = getProject(params.ItemId);
-    console.log('project', project)
+    // console.log('project', project)
+
+    // const result = project.AdditionalPhotos.trim().split(/\s+/);
+    const result = project.AdditionalPhotos.trim().split(/\s+/);
+console.log(result)
 
     return (
         <>
@@ -29,24 +29,26 @@ export default function Project() {
                         <div className="medium-padding">
                             <div className="project-page-description">
                                 <div className="page-title">
-                                    <h1 
-                                    // data-w-id="c9208809-18b5-1d38-3bcf-49597b8208c6"
-                                    //     style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+                                    <h1
+                                        // data-w-id="c9208809-18b5-1d38-3bcf-49597b8208c6"
+                                        //     style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
                                         className="large-titlee">
-                                            {project.Name}
-                                        </h1>
+                                        {project.Name}
+                                    </h1>
                                 </div>
                                 <div className="services-wrapepr">
                                     <div className="collection-list-wrapper w-dyn-list">
                                         <div role="list" className="collection-list padding-left-neg-10 w-dyn-items w-row">
                                             <div role="listitem" className="service-tags w-dyn-item w-col w-col-6">
-                                                <div className="button-text red"></div>
+                                                <div className="button-text red">
+                                                    {project.ServicesRendered}
+                                                </div>
                                                 <div className="button-text">•</div>
                                             </div>
                                         </div>
-                                        <div className="w-dyn-empty">
+                                        {/* <div className="w-dyn-empty">
                                             <div>No items found.</div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -58,10 +60,10 @@ export default function Project() {
                 <div className="main-container">
                     <div className="small-padding">
                         <div className="about-section">
-                            <img 
-                            // data-w-id="76ad76c0-b27f-160d-0643-ce7f6fd2d01f"
-                            //     loading="lazy"
-                            //     style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+                            <img
+                                // data-w-id="76ad76c0-b27f-160d-0643-ce7f6fd2d01f"
+                                //     loading="lazy"
+                                //     style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
 
                                 src={project.MainProjectImage} alt="main project image" />
 
@@ -73,9 +75,9 @@ export default function Project() {
                 <div className="main-container">
                     <div className="small-padding">
                         <div className="about-section">
-                            <div 
-                            // data-w-id="cce0d9f6-4ff0-e18d-2a9c-72c6ba585a79"
-                            //     style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+                            <div
+                                // data-w-id="cce0d9f6-4ff0-e18d-2a9c-72c6ba585a79"
+                                //     style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
 
                                 className="project-over-view-section">
                                 <div>
@@ -86,7 +88,7 @@ export default function Project() {
                                 </div>
                                 <div className="about-paragraph">
                                     <p className="regular">
-                                    {project.ProjectOverview}
+                                        {project.ProjectOverview}
                                     </p>
                                 </div>
                             </div>
@@ -99,7 +101,7 @@ export default function Project() {
                                 </div>
                                 <div className="about-paragraph">
                                     <p className="regular">
-                                    {project.ProjectContribution}
+                                        {project.ProjectContribution}
                                     </p>
                                 </div>
                             </div>
@@ -122,9 +124,9 @@ export default function Project() {
                 <div className="main-container">
                     <div className="small-padding">
                         <div className="about-section">
-                            <div 
-                            // data-w-id="28792773-71e8-d811-df88-871957fef4e7"
-                            //     style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+                            <div
+                                // data-w-id="28792773-71e8-d811-df88-871957fef4e7"
+                                //     style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
                                 className="contact-page-right gray-bg">
                                 <img src={project.StandardDesktopImg}
                                     loading="lazy"
@@ -137,7 +139,7 @@ export default function Project() {
                                 // style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
                                 className="contact-page-right gray-bg">
                                 <img
-                                   src={project.MobileImg}
+                                    src={project.MobileImg}
                                     loading="lazy"
                                     alt=""
                                     className="image" />
@@ -151,9 +153,9 @@ export default function Project() {
                 <div className="main-container">
                     <div className="small-padding">
                         <div className="about-section">
-                            <div 
-                            // data-w-id="c601cb4e-e8d3-f84c-9909-ee22bb67148c"
-                            //     style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+                            <div
+                                // data-w-id="c601cb4e-e8d3-f84c-9909-ee22bb67148c"
+                                //     style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
                                 className="client-feedback-left">
                                 <div
                                     className="sub-title red">Final thoughts &amp;
@@ -161,12 +163,12 @@ export default function Project() {
                                 </div>
                                 <h2 className="style-title">Additional Images</h2>
                             </div>
-                            <div 
-                            // data-w-id="c601cb4e-e8d3-f84c-9909-ee22bb671491"
-                            //     style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+                            <div
+                                // data-w-id="c601cb4e-e8d3-f84c-9909-ee22bb671491"
+                                //     style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
                                 className="client-feedback-right">
                                 <p className="big">
-{project.finalthought}
+                                    {project.finalthought}
                                 </p>
                             </div>
                         </div>
@@ -177,23 +179,25 @@ export default function Project() {
                 <div className="main-container">
                     <div className="small-padding">
                         <div className="w-dyn-list">
-                            <div 
-                            // data-w-id="750085ba-022e-838d-62fd-fc3f42b5dccb"
-                            //     style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" role="list"
-                                className="additional-classNamees w-dyn-items">
-                                <div role="listitem" className="additional-image-wrap gray-bg w-dyn-item">
-                                    <a href="#"
-                                        className="w-inline-block w-lightbox">
-                                        <img src="" loading="lazy" alt="" className="black-bg" />
-                                    </a>
-                                </div>
+                            <div className="additional-classes w-dyn-items">
+                                {/* <script type="application/json" class="w-json">{{ "items": [], "group": "Additional Photos" }}</script> */}
+                                {result.map(e => {
+                                    return (
+                                        <div role='listitem' className="additional-image-wrap gray-bg w-dyn-item w-dyn-repeater-item">
+                                            <div className="w-inline-block w-lightbox">
+                                                <img role='listitem' src={e.replace(/;/g, "")} alt="" className="black-bg" />
+                                            </div>
+                                        </div>
+                                    )
+
+                                })}
                             </div>
-                            <div className="w-dyn-empty">
+                            {/* <div className="w-dyn-empty">
                                 <div>No items found.</div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="live-link-cetner">
-                            <a href="#" className="regular live-link">View Live Preview</a>
+                            <a href={project.LiveLink} className="regular live-link">View Live Preview</a>
                         </div>
                     </div>
                 </div>
@@ -202,9 +206,9 @@ export default function Project() {
                 <div className="main-container">
                     <div className="small-padding">
                         <div className="about-section">
-                            <div 
-                            // data-w-id="978da061-b85f-741a-c7cf-dbc2bd169eb8" 
-                            // style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+                            <div
+                                // data-w-id="978da061-b85f-741a-c7cf-dbc2bd169eb8" 
+                                // style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
 
                                 className="client-feedback-left">
                                 <div className="about-paragraph">
@@ -212,9 +216,9 @@ export default function Project() {
                                     <h2 className="style-title">CLIENT FEEDBACK</h2>
                                 </div>
                             </div>
-                            <div 
-                            // data-w-id="978da061-b85f-741a-c7cf-dbc2bd169ebf" 
-                            // style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+                            <div
+                                // data-w-id="978da061-b85f-741a-c7cf-dbc2bd169ebf" 
+                                // style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
 
                                 className="client-feedback-right">
                                 <div className="about-paragraph">
@@ -231,9 +235,9 @@ export default function Project() {
                 <div className="main-container">
                     <div className="medium-padding">
                         <div className="about-section">
-                            <div 
-                            // data-w-id="fdb2fec5-5e12-ff0e-e5de-867bd40b60da" 
-                            // style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+                            <div
+                                // data-w-id="fdb2fec5-5e12-ff0e-e5de-867bd40b60da" 
+                                // style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
 
                                 className="contact-section-text top">
                                 <div className="sub-title">GENERAL INQUIRIES</div>
@@ -260,9 +264,9 @@ export default function Project() {
                                                     required="" />
 
                                             </div>
-                                            <div 
-                                            // data-w-id="fdb2fec5-5e12-ff0e-e5de-867bd40b60f1"
-                                            //     style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+                                            <div
+                                                // data-w-id="fdb2fec5-5e12-ff0e-e5de-867bd40b60f1"
+                                                //     style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
                                                 className="wrap">
                                                 <input
                                                     type="email"
@@ -290,12 +294,12 @@ export default function Project() {
                                             <div className="wrap">
 
                                             </div>
-                                            <div 
-                                            // data-w-id="fdb2fec5-5e12-ff0e-e5de-867bd40b60f6"
-                                            //     style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+                                            <div
+                                                // data-w-id="fdb2fec5-5e12-ff0e-e5de-867bd40b60f6"
+                                                //     style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
                                                 className="wrap margin-bottom">
 
-                                                </div>
+                                            </div>
                                             <input
                                                 type="submit"
                                                 value="Submit"
@@ -321,3 +325,5 @@ export default function Project() {
         </>
     )
 }
+
+

@@ -1,0 +1,101 @@
+.slidein-02s {
+    animation-duration: 1.5s;
+    animation-name: slidein-02s;
+    /* animation-iteration-count: 3; */
+    animation-direction: normal;
+    animation-delay: .5s;
+
+  }
+
+
+  .slidein-04s {
+    animation-duration: 1.5s;
+    animation-name: slidein-04s;
+    /* animation-iteration-count: 3; */
+    animation-direction: normal;
+    animation-delay: 0.4s;
+
+  }
+
+
+  .slidein-06s {
+    animation-duration: 1.5s;
+    animation-name: slidein-06s;
+    /* animation-iteration-count: 3; */
+    animation-direction: normal;
+    animation-delay: 0.6s;
+
+  }
+
+  .slidein-07s {
+    animation-duration: 1.5s;
+    animation-name: slidein-07s;
+    /* animation-iteration-count: 3; */
+    animation-direction: normal;
+    animation-delay: 0.7s;
+
+  }
+  
+  @keyframes slidein-02s {
+    0% {
+        transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+    }
+  
+    20% {
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        opacity: 1;
+        transform-style: preserve-3d;
+    }
+
+
+  }
+  
+  @keyframes slidein-04s {
+    0% {
+        transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+    }
+  
+    40% {
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+        opacity: 1;
+    }
+
+    }
+
+      
+  @keyframes slidein-06s {
+    0% {
+        transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+        opacity: 0;
+    }
+  
+    60% {
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+        opacity: 1;
+    }
+
+    }
+
+  
+ 
+  
+  @keyframes slidein-07s {
+    0% {
+        opacity: 0;
+       transform:  translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+    }
+  
+    70% {
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+        opacity: 1;
+    }
+
+
+  }
+  
+

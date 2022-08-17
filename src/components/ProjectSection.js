@@ -11,14 +11,19 @@ import {
 } from "react-router-dom";
 
 export default function ProjectSection() {
+  const inEffect = `
+  @keyframes slide-in-left {
+    0%   { opacity: 0; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
+  }
+`;
   let projects = getProjects();
-  let [searchParams, setSearchParams] = useSearchParams();
 
 
   const projectList = projects.slice(1, 3).map(pro => {
     return (
       <div key={pro.ItemID} className="w-dyn-list">
-        <h2>userId is 👉️ {pro.ItemID}</h2>
         <div role="list" className="w-dyn-items">
           <div role="listitem" className="w-dyn-item">
             <Link to={`/project/${pro.ItemID}`} className="project w-inline-block">
@@ -42,9 +47,9 @@ export default function ProjectSection() {
                 {/* <div className="mb-8px">
                           <div className="mb-8px thin">Built With</div>
                       </div> */}
-                <img src={pro.MobileImg} className="mobile-image" />
-                <img src={pro.StandardDesktopImg} style={{ zIndex: '10' }} className="image desktop-standard" />
-                <img src={pro.MainProjectImage} style={{ zIndex: '1' }} className="image large-desktop-img" />
+                <img src={pro.MobileImg} className="mobile-image slidein-07s" />
+                <img src={pro.StandardDesktopImg} style={{ zIndex: '10' }} className="image desktop-standard slidein-04s" />
+                <img src={pro.MainProjectImage} style={{ zIndex: '1' }} className="image large-desktop-img slidein-02s" />
               </div>
             </Link>
             <Outlet />
@@ -60,17 +65,13 @@ export default function ProjectSection() {
       <div className="main-container center top-padding">
         <div
           // data-w-id="606f14f7-abfa-2a4f-3fac-301115d568fe"
-          // style="
-          //   -webkit-transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1)
-          //     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-          //   -moz-transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1)
-          //     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-          //   -ms-transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1)
-          //     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-          //   transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0)
-          //     rotateY(0) rotateZ(0) skew(0, 0);
-          //   opacity: 0;
-          // "
+          style={{
+            animationDuration: "1s",
+            animationName: 'slide-in-left',
+            animationTimingFunction: "ease-in",
+            transform: "translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
+            opacity: "0"
+          }} 
           className="top-content projects center"
         >
           <h2
