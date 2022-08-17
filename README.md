@@ -29,7 +29,7 @@ Projects
 
 Contact
 
-![contact-page](https://github.com/WebbDeveloping/Webflow-React-Porfolio/blob/main/src/styles/images/contact-page.png)
+![contact-page](https://github.com/WebbDeveloping/Webflow-React-Porfolio/blob/main/src/styles/images/contact-page-2.png)
 
 <!-- ![contact-paget](https://github.com/WebbDeveloping/Webflow-React-Porfolio/blob/main/src/styles/images/contact-page.png) -->
 
