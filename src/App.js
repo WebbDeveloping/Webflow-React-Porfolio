@@ -1,4 +1,5 @@
 import './webflowFiles/css/normalize.css';
+import './App.css'
 import { Link } from "react-router-dom";
 import {
   Routes,
