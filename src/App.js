@@ -14,6 +14,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Project from './pages/Project';
 // import { projects } from '../wf-data/projects'
 
 function App() {
@@ -21,12 +22,32 @@ function App() {
   return (
     <div className="App body">
       <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/About' element={<About />} />
-          <Route path='/projects' element={<Projects projects={projects}/>} />
-          <Route path='/contact' element={<Contact />} />
-        
-        </Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='About' element={<About />} />
+        {/* <Route path='projects' element={<Projects projects={projects} />} /> */}
+        <Route path="projects" element={<Projects />}/>
+        <Route path="project" element={<Project />}>
+          <Route
+            index
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>Select an invoice</p>
+              </main>
+            }
+          />
+          <Route path=":ItemId" element={<Project />} />
+        </Route>
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: "1rem" }}>
+              <p>!There's nothing here!</p>
+            </main>
+          }
+        />
+        <Route path='/contact' element={<Contact />} />
+
+      </Routes>
     </div>
 
   );

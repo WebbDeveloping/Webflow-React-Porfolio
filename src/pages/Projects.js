@@ -3,17 +3,26 @@ import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 import ProjectListItem from "../components/ProjectListItem";
 import ProjectSection from "../components/ProjectSection";
-import { Link } from "react-router-dom";
+import {
+    NavLink,
+    Link,
+    Outlet,
+    useSearchParams,
+  } from "react-router-dom";
+import { getProjects } from "../wf-data/projects";
 // import ProjectListItem from '../ProjectListItem'
 
-export default function Projects(props) {
+export default function Projects() {
     // const [data, setData] = React.useState(props.projects);
+    let projects = getProjects();
+    let [searchParams, setSearchParams] = useSearchParams();
+    
 
-    const projectList = props.projects.map(pro => {
-        console.log('pro', pro)
-        return <ProjectListItem {...pro} />
+    const projectList = projects.map(pro => {
+        // console.log('pro', pro)
+        return <ProjectListItem key={pro.ItemID} {...pro} />
     })
-console.log(props.projects)
+// console.log(props.projects)
     return (
         <section className='body'>
             <Navigation />

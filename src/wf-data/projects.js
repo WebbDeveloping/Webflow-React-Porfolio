@@ -243,3 +243,14 @@ export const projects = [
       "PlatformLogo": "https://uploads-ssl.webflow.com/6104d73a27db50b91d2b6c77/62b3fc6e84f4d21059f3ee28_6293a15751a4f4d8251af235.png"
     }
   ]
+
+  export function getProjects() {
+    return projects;
+  }
+
+  export function getProject(number) {
+    console.log('number', number)
+    return projects.find(
+      (project) => project.ItemID == number
+    );
+  }

@@ -10,7 +10,7 @@ import BlogArticleList from '../components/BlogArticleList';
 import ServiceSection from '../components/ServiceSection';
 import MainCTA from '../components/MainCTA';
 import Footer from '../components/Footer';
-import { projects } from '../wf-data/projects'
+// import { projects } from '../wf-data/projects'
 
 export default function Home() {
     return (
@@ -18,7 +18,7 @@ export default function Home() {
             <Navigation />
             <SideCaptions />
             <HomeHero />
-            <ProjectSection projects={projects} />
+            <ProjectSection />
             <AboutMe />
             <BlogArticleList />
             <ServiceSection />
