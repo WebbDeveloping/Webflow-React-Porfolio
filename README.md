@@ -2,6 +2,11 @@
 
 ![home-screenshot](https://github.com/WebbDeveloping/Webflow-React-Porfolio/blob/main/src/styles/images/hero-screenshot.png)
 
+This was originally built in Webflow (www.joewebbdesigns.com)
+
+I am currently tasking myself to rebuild it in React.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
