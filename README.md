@@ -17,7 +17,7 @@ Home: Mobile
 
 About Mobile
 
-![about-mobile-page](https://github.com/WebbDeveloping/Webflow-React-Porfolio/blob/main/src/styles/images/about-page.png)
+![about-mobile-page](https://github.com/WebbDeveloping/Webflow-React-Porfolio/blob/main/src/styles/images/about-mobile-page.png)
 
 About Desktop
 
@@ -25,7 +25,7 @@ About Desktop
 
 Projects
 
-![projects-page](https://github.com/WebbDeveloping/Webflow-React-Porfolio/blob/main/src/styles/images/projects-page.png)
+![projects-page](https://github.com/WebbDeveloping/Webflow-React-Porfolio/blob/main/src/styles/images/project-page.png)
 
 <!-- ![contact-paget](https://github.com/WebbDeveloping/Webflow-React-Porfolio/blob/main/src/styles/images/contact-page.png) -->
 
