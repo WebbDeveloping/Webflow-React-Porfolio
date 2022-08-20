@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import './animations.css'
 import "./index.css";
+import "./styles/sass/main.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import About from "./pages/About";
