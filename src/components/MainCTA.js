@@ -9,14 +9,14 @@ export default function MainCTA() {
         <div className="banner-section">
           <div
             data-w-id="0406720a-613a-f90a-dbf4-88908c478db7"
-            className="caption red"
+            className="caption red fade-in ms200"
           >
             LOOKING FOR AN EXPERT?
           </div>
           <div className="banner-heading">
             <h2
               data-w-id="0406720a-613a-f90a-dbf4-88908c478dba"
-              className="style-title cta-large"
+              className="style-title cta-large fade-in ms400"
             >
               LET&#x27;S START A PROJECT TOGETHER
             </h2>
@@ -27,7 +27,7 @@ export default function MainCTA() {
             target="_blank"
             className="banner-btn w-inline-block"
           >
-            <div className="project-btn-inside">
+            <div className="project-btn-inside fade-in ms600">
               <div className="button-text white">Tell me the details</div>
               <img
                 src={longRedArrow}

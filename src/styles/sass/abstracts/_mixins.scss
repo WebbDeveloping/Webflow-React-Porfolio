@@ -1,0 +1,44 @@
+@mixin fade-in($waitTime) {
+    animation: 
+        wait #{$waitTime},
+        fade-in 800ms #{$waitTime};
+}
+
+@mixin fade-in75($waitTime) {
+    animation: 
+        wait #{$waitTime},
+        fade-in75 100ms #{$waitTime};
+}
+
+@keyframes wait {
+    0% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fade-in75 {
+    0% { opacity: 0; }
+    100% { opacity: 0.75; }
+}
+
+
+.ms5001 {
+    @include fade-in('500ms');
+}
+
+.ms500 {
+    @include fade-in('500ms');
+}
+
+.ms200 {
+    @include fade-in('200ms');
+} 
+
+.ms700 {
+    @include fade-in('700ms');
+}
+

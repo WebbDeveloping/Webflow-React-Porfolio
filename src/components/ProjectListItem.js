@@ -18,15 +18,15 @@ export default function ProjectListItem(props) {
                         <div className="flex mb-32px">
                             <div>
                                 <div>
-                                    <div className="sub-title mb-16px">{props.Name}</div>
+                                    <div className="sub-title mb-16px fade-in ms200">{props.Name}</div>
                                 </div>
-                                <div className="inside-button-container">
-                                    <div className="button-text red">View Project</div>
+                                <div className="inside-button-container ms400">
+                                    <div className="button-text red fade-in ms400">View Project</div>
                                     <img
                                         src={downArrow}
                                         loading="lazy"
                                         alt=""
-                                        className="image cr-arrow right"
+                                        className="image cr-arrow right fade-in ms400"
                                     />
                                 </div>
                             </div>
@@ -34,9 +34,9 @@ export default function ProjectListItem(props) {
                         {/* <div className="mb-8px">
                             <div className="mb-8px thin">Built With</div>
                         </div> */}
-                        <img src={props.MobileImg} className="mobile-image" />
-                        <img src={props.StandardDesktopImg} style={{zIndex: '10'}} className="image desktop-standard" />
-                        <img src={props.MainProjectImage} style={{zIndex: '1'}} className="image large-desktop-img" />
+                        <img src={props.MobileImg} className="mobile-image fade-in ms300" />
+                        <img src={props.StandardDesktopImg} style={{zIndex: '10'}} className="image desktop-standard fade-in ms500" />
+                        <img src={props.MainProjectImage} style={{zIndex: '1'}} className="image large-desktop-img fade-in ms700" />
                     </div>
                 </Link>
             </div>

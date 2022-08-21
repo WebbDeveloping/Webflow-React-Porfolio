@@ -9,19 +9,12 @@ export default function AboutMe() {
       <div className="extra-small-padding">
         <div className="about-section">
           <div
-            // data-w-id="280e51e2-17e4-7eb9-ec20-18a4d2cbc94f"
-            // style="
-            //   -webkit-transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1)
-            //     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-            //   -moz-transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1)
-            //     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-            //   -ms-transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1)
-            //     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-            //   transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1)
-            //     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-            //   opacity: 0;
-            // "
-            className="about-section-image left-image"
+            id='about-me-home'
+            style={{
+              transform: "translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
+              opacity: "0"}}
+            
+            className="about-section-image left-image fade-in ms600"
           >
             <img
               src="./webflowFiles/images/Profile-Photo-1.png"
@@ -32,19 +25,12 @@ export default function AboutMe() {
             />
           </div>
           <div
-            // data-w-id="280e51e2-17e4-7eb9-ec20-18a4d2cbc951"
-            // style="
-            //   -webkit-transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1)
-            //     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-            //   -moz-transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1)
-            //     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-            //   -ms-transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1)
-            //     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-            //   transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1)
-            //     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-            //   opacity: 0;
-            // "
-            className="about-section-text"
+            data-w-id="280e51e2-17e4-7eb9-ec20-18a4d2cbc951"
+            style=
+              {{transform: "translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
+              opacity: "0"
+            }}
+            className="about-section-text fade-in ms300"
           >
             <div className="about-title">
               <div className="sub-title red">About</div>

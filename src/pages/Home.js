@@ -15,10 +15,10 @@ import Footer from '../components/Footer';
 export default function Home() {
     return (
         <div className="project-wrapper">
-            <Navigation />
-            <SideCaptions />
-            <HomeHero />
-            <ProjectSection />
+            <Navigation id="navigation"/>
+            <SideCaptions id="side-captions"/>
+            <HomeHero id="hero"/>
+            <ProjectSection  />
             <AboutMe />
             <BlogArticleList />
             <ServiceSection />

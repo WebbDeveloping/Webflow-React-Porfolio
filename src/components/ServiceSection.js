@@ -15,7 +15,7 @@ const hideStyle = {
         <div className="service-section">
           <div
             data-w-id="6fec1731-be54-d4c2-4e05-f395bb33712a"
-            className="service-section-text"
+            className="service-section-text fade-in ms300"
           >
             <div className="about-title">
               <div className="sub-title">SERVICES</div>
@@ -45,9 +45,9 @@ const hideStyle = {
               href="#"
               data-ix="show-answer"
               data-w-id="6fec1731-be54-d4c2-4e05-f395bb33713a"
-              className="service w-inline-block"
+              className="service w-inline-block fade-in ms200"
             >
-              <div className="question">
+              <div className="question ">
                 <div className="plus">+</div>
                 <h4 className="question-text sub-title normal">
                   Custom Website
@@ -69,9 +69,9 @@ const hideStyle = {
               href="#"
               data-ix="show-answer"
               data-w-id="6fec1731-be54-d4c2-4e05-f395bb337143"
-              className="service w-inline-block"
+              className="service w-inline-block fade-in ms400"
             >
-              <div className="question">
+              <div className="question ">
                 <div className="plus">+</div>
                 <h4 className="question-text sub-title normal">
                   Webflow Websites
@@ -91,9 +91,9 @@ const hideStyle = {
               href="#"
               data-ix="show-answer"
               data-w-id="117e2e39-fbb0-f7af-0ca2-7c02ec8fe0f3"
-              className="service w-inline-block"
+              className="service w-inline-block fade-in ms600"
             >
-              <div className="question">
+              <div className="question ">
                 <div className="plus">+</div>
                 <h4 className="question-text sub-title normal">
                   GoHighLevel Websites
@@ -112,9 +112,9 @@ const hideStyle = {
               href="#"
               data-ix="show-answer"
               data-w-id="f99f639c-2732-504a-56af-be572e484759"
-              className="service w-inline-block"
+              className="service w-inline-block fade-in ms700"
             >
-              <div className="question">
+              <div className="question ">
                 <div className="plus">+</div>
                 <h4 className="question-text sub-title normal">
                   Lead Generation Campaigns

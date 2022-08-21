@@ -1,23 +1,15 @@
-import React from 'react'
+import { React, useEffect } from 'react'
 import downArrow from "../webflowFiles/images/down-arrow.svg";
-
-import ProjectListItem from './ProjectListItem';
 import { getProjects } from "../wf-data/projects";
-import {
-  NavLink,
-  Outlet,
-  useSearchParams,
-  Link
-} from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
+
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 export default function ProjectSection() {
-  const inEffect = `
-  @keyframes slide-in-left {
-    0%   { opacity: 0; }
-    50%  { opacity: 0; }
-    100% { opacity: 1; }
-  }
-`;
+  useEffect(() => {
+    AOS.init({ duration: 2000 })
+  }, [])
   let projects = getProjects();
 
 
@@ -31,25 +23,55 @@ export default function ProjectSection() {
                 <div className="flex mb-32px">
                   <div>
                     <div>
-                      <div className="sub-title mb-16px">{pro.Name}</div>
+                      <div
+                        data-aos="fade-in"
+                        data-aos-offset="200"
+                        data-aos-easing="ease-in"
+                        data-aos-delay="200"
+                        className="sub-title mb-16px fade-in ms200">{pro.Name}</div>
                     </div>
                     <div className="inside-button-container">
-                      <div className="button-text red">View Project</div>
+                      <div
+                        data-aos="fade-in"
+                        data-aos-offset="200"
+                        data-aos-easing="ease-in"
+                        data-aos-delay="400"
+                        className="button-text red fade-in ms400">View Project</div>
                       <img
                         src={downArrow}
                         loading="lazy"
                         alt=""
-                        className="image cr-arrow right"
+                        data-aos="fade-in"
+                        data-aos-offset="200"
+                        data-aos-delay="400"
+                        data-aos-easing="ease-in"
+                        className="image cr-arrow right fade-in ms400"
                       />
                     </div>
                   </div>
                 </div>
-                {/* <div className="mb-8px">
-                          <div className="mb-8px thin">Built With</div>
-                      </div> */}
-                <img src={pro.MobileImg} className="mobile-image slidein-07s" />
-                <img src={pro.StandardDesktopImg} style={{ zIndex: '10' }} className="image desktop-standard slidein-04s" />
-                <img src={pro.MainProjectImage} style={{ zIndex: '1' }} className="image large-desktop-img slidein-02s" />
+                <img
+                  src={pro.MobileImg}
+                  className="mobile-image fade-in ms600"
+                  data-aos="fade-in"
+                  data-aos-offset="200"
+                  data-aos-delay="600" />
+                <img
+                  data-aos="fade-in"
+                  data-aos-offset="200"
+                  data-aos-delay="400"
+                  data-aos-easing="ease-in"
+                  src={pro.StandardDesktopImg} 
+                  style={{ zIndex: '10' }} 
+                  className="image desktop-standard fade-in ms400" />
+                <img
+                  data-aos="fade-in"
+                  data-aos-offset="200"
+                  data-aos-easing="ease-in"
+                  data-aos-delay="500"
+                  src={pro.MainProjectImage} 
+                  style={{ zIndex: '1' }} 
+                  className="image large-desktop-img fade-in ms200" />
               </div>
             </Link>
             <Outlet />
@@ -61,32 +83,15 @@ export default function ProjectSection() {
   })
 
   return (
-    <div className="section">
+    <div id="projects" className="section">
       <div className="main-container center top-padding">
         <div
-          // data-w-id="606f14f7-abfa-2a4f-3fac-301115d568fe"
-          style={{
-            animationDuration: "1s",
-            animationName: 'slide-in-left',
-            animationTimingFunction: "ease-in",
-            transform: "translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
-            opacity: "0"
-          }} 
+          data-aos="fade-in"
+          data-aos-offset="200"
+          data-aos-delay="50"
           className="top-content projects center"
         >
           <h2
-            // data-w-id="606f14f7-abfa-2a4f-3fac-301115d568ff"
-            // style="
-            //   -webkit-transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1)
-            //     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-            //   -moz-transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1)
-            //     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-            //   -ms-transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1)
-            //     rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-            //   transform: translate3d(0, 0, 0) scale3d(0.8, 0.8, 1) rotateX(0)
-            //     rotateY(0) rotateZ(0) skew(0, 0);
-            //   opacity: 0;
-            // "
             className="style-title"
           >
             My Custom Website Projects
